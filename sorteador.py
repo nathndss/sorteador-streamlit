@@ -15,11 +15,11 @@ st.markdown("""
         text-align: center;
     }
     #entrada-box textarea {
-        font-size: 18px;
-        color: #4b0082;
-        background-color: #ffffff;  /* <-- cor de fundo mais clara */
+        font-size: 25px;
+        color: white;
+        background-color: light gray;  /* <-- cor de fundo mais clara */
         border: 2px solid #6a0dad;
-        border-radius: 8px;
+        border-radius: 10px;
     }
     .stButton button {
         background-color: #6a0dad;
