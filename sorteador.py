@@ -17,13 +17,13 @@ if st.button("🎯 Sortear"):
 st.markdown("""
     <style>
     .stTextArea label {
-        font-size: 18px;
+        font-size: 30px;
         color: #6a0dad;
     }
     .stButton button {
         background-color: #6a0dad;
         color: white;
-        font-size: 16px;
+        font-size: 25px;
         border-radius: 10px;
     }
     </style>
