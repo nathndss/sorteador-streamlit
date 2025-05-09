@@ -40,7 +40,7 @@ body, .main {
 .stButton > button {
     display: block;
     margin: 5px auto 0 auto;.  /* Reduzido o espaço acima */
-    background-color: #6a0dad;
+    background-color: violet;
     color: white;
     font-size: 18px;
     padding: 10px 30px;
