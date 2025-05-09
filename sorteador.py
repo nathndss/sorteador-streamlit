@@ -1,7 +1,10 @@
 import streamlit as st
 import random
 
+col1, col2 = st.columns(2)
 with col1:
+    st.image("https://i.imgur.com/A1N2p1K.png", width=100)
+with col2:
     st.write("Bem-vindo ao sorteador!")
 
 st.set_page_config(page_title="Sorteador", page_icon="🎲")
