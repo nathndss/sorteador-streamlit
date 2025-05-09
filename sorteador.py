@@ -11,7 +11,7 @@ body, .main {
 }
 
 .titulo {
-    font-size: 70px !important;
+    font-size: 60px !important;
     color: #6a0dad;
     text-align: center;
     margin-bottom: 20px;
