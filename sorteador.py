@@ -15,7 +15,7 @@ st.markdown("""
         text-align: center;
     }
     #entrada-box textarea {
-        font-size: 30px;
+        font-size: 18px;
         color: #4b0082;
         background-color: #f0e6ff;
         border: 2px solid #6a0dad;
