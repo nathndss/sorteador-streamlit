@@ -1,7 +1,6 @@
 import streamlit as st
 import random
 
-col1 = st.columns(1)
 with col1:
     st.write("Bem-vindo ao sorteador!")
 
