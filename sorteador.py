@@ -20,6 +20,7 @@ st.markdown("""
         font-size: 25px;
     }
     .stButton button {
+        text-align: center;
         background-color: #6a0dad;
         color: white;
         font-size: 80px;
