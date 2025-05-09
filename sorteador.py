@@ -14,18 +14,5 @@ if st.button("🎯 Sortear"):
         st.success(f"🥳 O sorteado foi: **{sorteado}**")
     else:
         st.warning("⚠️ Por favor, insira ao menos um item para sortear.")
-st.markdown("""
-    <style>
-    .stTextArea label {
-        font-size: 200px;
-        color: #6a0dad;
-    }
-    .stButton button {
-        background-color: #6a0dad;
-        color: white;
-        font-size: 100px;
-        border-radius: 10px;
-    }
-    </style>
-""", unsafe_allow_html=True)
+
 
