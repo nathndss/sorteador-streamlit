@@ -22,7 +22,7 @@ st.markdown("""
         border-radius: 8px;
     }
     #entrada-box label {
-        font-size: 16px;
+        font-size: 20px;
         color: #6a0dad;
         font-weight: bold;
     }
