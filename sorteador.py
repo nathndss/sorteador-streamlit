@@ -15,14 +15,14 @@ st.markdown("""
         text-align: center;
     }
     #entrada-box textarea {
-        font-size: 50px;
+        font-size: 30px;
         color: #4b0082;
         background-color: #f0e6ff;
         border: 2px solid #6a0dad;
         border-radius: 8px;
     }
     #entrada-box label {
-        font-size: 40px;
+        font-size: 25px;
         color: #6a0dad;
         font-weight: bold;
     }
