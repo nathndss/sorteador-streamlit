@@ -15,12 +15,12 @@ st.markdown("""
         text-align: center;
     }
     .stTextArea label {
+        text-align: center;
         font-weight: bold;
         color: #4b0082;
         font-size: 25px;
     }
     .stButton button {
-        text-align: center;
         background-color: #6a0dad;
         color: white;
         font-size: 80px;
