@@ -6,7 +6,7 @@ st.markdown("""
 <style>
 /* Fundo geral */
 body, .main {
-    background-color: white;
+    background-color: violet;
     font-family: 'Segoe UI', sans-serif;
 }
 
