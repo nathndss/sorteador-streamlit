@@ -18,15 +18,18 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Área de texto */
+/* Área de texto personalizada */
 #entrada-box textarea {
-    font-size: 18px;
+    font-size: 22px;  /* Tamanho maior do texto */
     color: #4b0082;
-    background-color: #f9f9f9;
+    background-color: #fafafa;  /* Cor mais clara */
     border: 2px solid #6a0dad;
     border-radius: 8px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    width: 100%;  /* Largura 100% da tela */
+    height: 200px;  /* Maior altura */
+    padding: 15px;  /* Espaço interno maior */
 }
 
 #entrada-box textarea:hover,
@@ -38,7 +41,7 @@ h1 {
 /* Botão sorteio */
 .stButton > button {
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
     background-color: #6a0dad;
     color: white;
     font-size: 18px;
@@ -64,6 +67,7 @@ h1 {
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 # Título do app
 st.markdown("<h1>🎲 Sorteador de Nomes ou Números</h1>", unsafe_allow_html=True)
