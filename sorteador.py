@@ -4,7 +4,7 @@ import random
 # Configuração da página
 st.set_page_config(page_title="Sorteador Online", page_icon="🎲")
 
-# Estilos personalizados
+# Estilo CSS personalizado
 st.markdown("""
     <style>
     .main {
@@ -14,19 +14,19 @@ st.markdown("""
         color: #6a0dad;
         text-align: center;
     }
-    .stTextArea label {
-        text-align: center;
-        font-weight: bold;
+    #entrada-box textarea {
+        font-size: 18px;
         color: #4b0082;
-        font-size: 25px;
+        background-color: #f0e6ff;
+        border: 2px solid #6a0dad;
+        border-radius: 8px;
     }
     .stButton button {
         background-color: #6a0dad;
         color: white;
-        font-size: 100px;
-        border-radius: 16px;
-        padding: 16px 40px;
-        position: center;
+        font-size: 16px;
+        border-radius: 8px;
+        padding: 8px 20px;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -34,13 +34,16 @@ st.markdown("""
 # Título
 st.markdown("<h1>🎉 Sorteador Online 🎉</h1>", unsafe_allow_html=True)
 
-# Entrada de dados
-st.markdown("<h3 style='color: white;'>✍️ Digite os nomes ou números separados por vírgula:</h4>", unsafe_allow_html=True)
+# Título da entrada com tamanho e cor personalizada
+st.markdown("<h3 style='color: #6a0dad;'>✍️ Digite os nomes ou números separados por vírgula:</h3>", unsafe_allow_html=True)
+
+# Entrada de texto estilizada
+st.markdown('<div id="entrada-box">', unsafe_allow_html=True)
 entrada = st.text_area(label="", height=150)
+st.markdown('</div>', unsafe_allow_html=True)
 
-# Botão de sorteio
-col1, col2, col3 = st.columns([1, 2, 1])  # Cria 3 colunas, a do meio é maior
-
+# Botão centralizado
+col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     if st.button("🎯 Sortear"):
         if entrada.strip():
