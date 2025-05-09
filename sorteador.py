@@ -3,7 +3,7 @@ import random
 
 st.set_page_config(page_title="Sorteador", page_icon="🎲")
 
-st.markdown("<h1 style='text-align: center; color: blue;'>🎉 Sorteador Simples 🎉</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: white;'>🎉 Sorteador Simples 🎉</h1>", unsafe_allow_html=True)
 
 entrada = st.text_area("✍️ Digite os nomes ou números separados por vírgula:")
 
