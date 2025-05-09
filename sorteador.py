@@ -71,7 +71,7 @@ st.markdown("<h1 class='titulo'>🎲 Sorteador 🎲</h1>", unsafe_allow_html=Tru
 # Caixa de entrada
 with st.container():
     st.markdown('<div id="entrada-box">', unsafe_allow_html=True)
-   entrada = st.text_area("✍️ Digite os nomes ou números separados por vírgula:", height=400)
+    entrada = st.text_area("✍️ Digite os nomes ou números separados por vírgula:", height=400)
     st.markdown('</div>', unsafe_allow_html=True)
 
 # Botão de sorteio
