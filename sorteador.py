@@ -7,7 +7,7 @@ st.markdown("<h1 style='text-align: center; color: white;'>🎉 Sorteador Simple
 
 entrada = st.text_area("✍️ Digite os nomes ou números separados por vírgula:")
 
- col1, col2 = st.columns(2)
+col1, col2 = st.columns(2)
 with col1:
     st.image("https://i.imgur.com/A1N2p1K.png", width=100)
 with col2:
