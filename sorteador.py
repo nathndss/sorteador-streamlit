@@ -14,18 +14,18 @@ body, .main {
 h1 {
     color: #6a0dad;
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 70px;
+    margin-bottom: 15px;
 }
 
 /* Área de texto personalizada */
 #entrada-box textarea {
-    font-size: 18px;
+    font-size: 25px;
     color: #4b0082;
     background-color: #f9f9f9;
     border: 2px solid #6a0dad;
     border-radius: 8px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
