@@ -14,8 +14,8 @@ body, .main {
 h1 {
     color: #6a0dad;
     text-align: center;
-    font-size: 80px;
-    margin-bottom: 15px;
+    font-size: 48px;  /* Tamanho aumentado */
+    margin-bottom: 20px;
 }
 
 /* Área de texto personalizada */
