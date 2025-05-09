@@ -1,12 +1,12 @@
 import streamlit as st
 import random
 
-# CSS customizado para estilo global
+# CSS customizado
 st.markdown("""
 <style>
 /* Fundo geral */
 body, .main {
-    background-color: violet;
+    background-color: #f5f0ff;
     font-family: 'Segoe UI', sans-serif;
 }
 
@@ -20,16 +20,13 @@ h1 {
 
 /* Área de texto personalizada */
 #entrada-box textarea {
-    font-size: 22px;  /* Tamanho maior do texto */
+    font-size: 18px;
     color: #4b0082;
-    background-color: white;  /* Cor mais clara */
+    background-color: #f9f9f9;
     border: 2px solid #6a0dad;
     border-radius: 8px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
-    width: 100%;  /* Largura 100% da tela */
-    height: 200px;  /* Maior altura */
-    padding: 15px;  /* Espaço interno maior */
 }
 
 #entrada-box textarea:hover,
@@ -42,7 +39,7 @@ h1 {
 .stButton > button {
     display: block;
     margin: 20px auto;
-    background-color: blue sky;
+    background-color: #6a0dad;
     color: white;
     font-size: 18px;
     padding: 10px 30px;
@@ -68,22 +65,22 @@ h1 {
 </style>
 """, unsafe_allow_html=True)
 
+# Título principal
+st.markdown("<h1>🎲 Sorteador de Nomes ou Números</h1>", unsafe_allow_html=True)
 
-# Título do app
-st.markdown("<h1>🎲 Sorteador 🎲</h1>", unsafe_allow_html=True)
-
-# Entrada de nomes
+# Caixa de entrada
 with st.container():
     st.markdown('<div id="entrada-box">', unsafe_allow_html=True)
     entrada = st.text_area("✍️ Digite os nomes ou números separados por vírgula:")
     st.markdown('</div>', unsafe_allow_html=True)
 
-# Botão centralizado
+# Botão de sorteio
 if st.button("🎯 Sortear"):
     nomes = [x.strip() for x in entrada.split(",") if x.strip()]
     if nomes:
         sorteado = random.choice(nomes)
         st.markdown(f"<div class='resultado'>✅ Sorteado: <strong>{sorteado}</strong></div>", unsafe_allow_html=True)
     else:
-        st.warning("Por favor, insira ao menos um nome ou número válido.")
+        st.warning("Por favor, insira pelo menos um nome ou número válido.")
+
 
