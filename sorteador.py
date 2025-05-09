@@ -5,7 +5,7 @@ st.set_page_config(page_title="Sorteador", page_icon="🎲")
 
 st.markdown("<h1 style='text-align: center;  font-size: 70px; color: white;'>🎉 Sorteador 🎉</h1>", unsafe_allow_html=True)
 
-st.text_area("<h1 style=font-size: 20px; color: white;> ✍️ Digite os nomes ou números separados por vírgula:</h1>")
+st.text_area("<h1 style= 'font-size: 20px; color: white;> ' "✍️ Digite os nomes ou números separados por vírgula:"</h1>")
 
 col1, col2 = st.columns(2)
 with col2:
