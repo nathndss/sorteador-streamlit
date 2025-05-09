@@ -4,7 +4,7 @@ import random
 # Configuração da página
 st.set_page_config(page_title="Sorteador Online", page_icon="🎲")
 
-# Estilo personalizado (CSS)
+# Estilos personalizados
 st.markdown("""
     <style>
     .main {
@@ -14,17 +14,10 @@ st.markdown("""
         color: #6a0dad;
         text-align: center;
     }
-    #entrada-box textarea {
-        font-size: 18px;
-        color: #4b0082;
-        background-color: #f0e6ff;
-        border: 2px solid #6a0dad;
-        border-radius: 8px;
-    }
-    #entrada-box label {
-        font-size: 20px;
-        color: #6a0dad;
+    .stTextArea label {
         font-weight: bold;
+        color: #4b0082;
+        font-size: 18px;
     }
     .stButton button {
         background-color: #6a0dad;
@@ -39,7 +32,14 @@ st.markdown("""
 # Título
 st.markdown("<h1>🎉 Sorteador Online 🎉</h1>", unsafe_allow_html=True)
 
-# Entrada personalizada com CSS
-with st.container():
-    st.markdown('<div id="entrada-box">', unsafe_allow_html=True)
-    entrada = st
+# Entrada de dados
+entrada = st.text_area("✍️ Digite os nomes ou números separados por vírgula:")
+
+# Botão de sorteio
+if st.button("🎯 Sortear"):
+    if entrada.strip():
+        itens = [item.strip() for item in entrada.split(",") if item.strip()]
+        sorteado = random.choice(itens)
+        st.success(f"🥳 O sorteado foi: **{sorteado}**")
+    else:
+        st.warning("⚠️ Por favor, insira ao menos um item para sortear.")
