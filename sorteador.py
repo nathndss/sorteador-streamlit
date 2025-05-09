@@ -1,17 +1,16 @@
 import streamlit as st
 import random
 
+col1 = st.columns(1)
+with col1:
+    st.write("Bem-vindo ao sorteador!")
+
 st.set_page_config(page_title="Sorteador", page_icon="🎲")
 
 st.markdown("<h1 style='text-align: center; color: white;'>🎉 Sorteador Simples 🎉</h1>", unsafe_allow_html=True)
 
 entrada = st.text_area("✍️ Digite os nomes ou números separados por vírgula:")
 
-col1, col2 = st.columns(2)
-with col1:
-    st.image("https://i.imgur.com/A1N2p1K.png", width=100)
-with col2:
-    st.write("Bem-vindo ao sorteador!")
     
 if st.button("🎯 Sortear"):
     if entrada.strip():
