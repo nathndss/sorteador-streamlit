@@ -58,9 +58,9 @@ h1 {
 /* Resultado */
 .resultado {
     text-align: center;
-    font-size: 100px;
+    font-size: 80px;
     color: #2e0854;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 </style>
 """, unsafe_allow_html=True)
