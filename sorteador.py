@@ -1,16 +1,41 @@
 import streamlit as st
 import random
 
-st.set_page_config(page_title="Sorteador", page_icon="🎲")
+# Configuração da página
+st.set_page_config(page_title="Sorteador Online", page_icon="🎲")
 
-st.markdown("<h1 style='text-align: center;  font-size: 70px; color: white;'>🎉 Sorteador 🎉</h1>", unsafe_allow_html=True)
+# Estilos personalizados
+st.markdown("""
+    <style>
+    .main {
+        background-color: #f5f0ff;
+    }
+    h1 {
+        color: #6a0dad;
+        text-align: center;
+    }
+    .stTextArea label {
+        font-weight: bold;
+        color: #4b0082;
+        font-size: 18px;
+    }
+    .stButton button {
+        background-color: #6a0dad;
+        color: white;
+        font-size: 16px;
+        border-radius: 8px;
+        padding: 8px 20px;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
-st.text_area("<h1 style= 'font-size: 20px; color: white;'>✍ Digite os nomes ou números separados por vírgula:</h1>")
+# Título
+st.markdown("<h1>🎉 Sorteador Online 🎉</h1>", unsafe_allow_html=True)
 
-col1, col2 = st.columns(2)
-with col2:
-    st.write("Bem-vindo ao sorteador!")
-    
+# Entrada de dados
+entrada = st.text_area("✍️ Digite os nomes ou números separados por vírgula:")
+
+# Botão de sorteio
 if st.button("🎯 Sortear"):
     if entrada.strip():
         itens = [item.strip() for item in entrada.split(",") if item.strip()]
@@ -18,5 +43,4 @@ if st.button("🎯 Sortear"):
         st.success(f"🥳 O sorteado foi: **{sorteado}**")
     else:
         st.warning("⚠️ Por favor, insira ao menos um item para sortear.")
-
 
