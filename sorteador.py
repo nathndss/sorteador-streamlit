@@ -38,10 +38,13 @@ st.markdown("<h1>🎉 Sorteador Online 🎉</h1>", unsafe_allow_html=True)
 entrada = st.text_area("✍️ Digite os nomes ou números separados por vírgula:")
 
 # Botão de sorteio
-if st.button("🎯 Sortear"):
-    if entrada.strip():
-        itens = [item.strip() for item in entrada.split(",") if item.strip()]
-        sorteado = random.choice(itens)
-        st.success(f"🥳 O sorteado foi: **🎉{sorteado}🎉**")
-    else:
-        st.warning("⚠️ Por favor, insira ao menos um item para sortear.")
+col1, col2, col3 = st.columns([1, 2, 1])  # Cria 3 colunas, a do meio é maior
+
+with col2:
+    if st.button("🎯 Sortear"):
+        if entrada.strip():
+            itens = [item.strip() for item in entrada.split(",") if item.strip()]
+            sorteado = random.choice(itens)
+            st.success(f"🥳 O sorteado foi: **{sorteado}**")
+        else:
+            st.warning("⚠️ Por favor, insira ao menos um item para sortear.")
