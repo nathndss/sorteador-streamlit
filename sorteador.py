@@ -10,11 +10,10 @@ body, .main {
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Título */
-h1 {
+.titulo-principal {
     color: #6a0dad;
     text-align: center;
-    font-size: 48px;  /* Tamanho aumentado */
+    font-size: 70px;  /* Agora realmente grande */
     margin-bottom: 20px;
 }
 
