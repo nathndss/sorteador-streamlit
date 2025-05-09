@@ -6,7 +6,7 @@ st.markdown("""
 <style>
 /* Fundo geral */
 body, .main {
-    background-color: #f5f0ff;
+    background-color: white;
     font-family: 'Segoe UI', sans-serif;
 }
 
@@ -42,7 +42,7 @@ h1 {
 .stButton > button {
     display: block;
     margin: 20px auto;
-    background-color: #6a0dad;
+    background-color: white;
     color: white;
     font-size: 18px;
     padding: 10px 30px;
@@ -70,7 +70,7 @@ h1 {
 
 
 # Título do app
-st.markdown("<h1>🎲 Sorteador 🎲</h1>", unsafe_allow_html=True)
+st.markdown("<h1>🎲 Sorteador🎲</h1>", unsafe_allow_html=True)
 
 # Entrada de nomes
 with st.container():
