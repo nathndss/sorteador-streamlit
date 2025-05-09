@@ -58,7 +58,7 @@ h1 {
 /* Resultado */
 .resultado {
     text-align: center;
-    font-size: 80px;
+    font-size: 70px;
     color: #2e0854;
     margin-top: 15px;
 }
@@ -79,7 +79,7 @@ if st.button("🎯 Sortear"):
     nomes = [x.strip() for x in entrada.split(",") if x.strip()]
     if nomes:
         sorteado = random.choice(nomes)
-        st.markdown(f"<div class='resultado'>✅ Sorteado: <strong>{sorteado}</strong></div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='resultado'>✅Resultado: <strong>{sorteado}</strong></div>", unsafe_allow_html=True)
     else:
         st.warning("Por favor, insira pelo menos um nome ou número válido.")
 
