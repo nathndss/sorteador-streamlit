@@ -35,7 +35,7 @@ st.markdown("""
 st.markdown("<h1>🎉 Sorteador Online 🎉</h1>", unsafe_allow_html=True)
 
 # Entrada de dados
-st.markdown("<h3 style='color: #6a0dad;'>✍️ Digite os nomes ou números separados por vírgula:</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='color: white;'>✍️ Digite os nomes ou números separados por vírgula:</h3>", unsafe_allow_html=True)
 entrada = st.text_area(label="", height=150)
 
 # Botão de sorteio
