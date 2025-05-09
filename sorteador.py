@@ -70,7 +70,7 @@ h1 {
 
 
 # Título do app
-st.markdown("<h1>🎲 Sorteador de Nomes ou Números</h1>", unsafe_allow_html=True)
+st.markdown("<h1>🎲 Sorteador 🎲</h1>", unsafe_allow_html=True)
 
 # Entrada de nomes
 with st.container():
