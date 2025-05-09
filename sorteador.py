@@ -17,7 +17,7 @@ st.markdown("""
     .stTextArea label {
         font-weight: bold;
         color: #4b0082;
-        font-size: 18px;
+        font-size: 25px;
     }
     .stButton button {
         background-color: #6a0dad;
