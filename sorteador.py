@@ -1,7 +1,7 @@
 import streamlit as st
 import random
 
-# CSS customizado
+# CSS customizado para estilo global
 st.markdown("""
 <style>
 /* Fundo geral */
@@ -18,7 +18,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Área de texto personalizada */
+/* Área de texto */
 #entrada-box textarea {
     font-size: 18px;
     color: #4b0082;
@@ -38,7 +38,7 @@ h1 {
 /* Botão sorteio */
 .stButton > button {
     display: block;
-    margin: 20px auto;
+    margin: 0 auto;
     background-color: #6a0dad;
     color: white;
     font-size: 18px;
@@ -65,20 +65,21 @@ h1 {
 </style>
 """, unsafe_allow_html=True)
 
-# Título principal
+# Título do app
 st.markdown("<h1>🎲 Sorteador de Nomes ou Números</h1>", unsafe_allow_html=True)
 
-# Caixa de entrada
+# Entrada de nomes
 with st.container():
     st.markdown('<div id="entrada-box">', unsafe_allow_html=True)
     entrada = st.text_area("✍️ Digite os nomes ou números separados por vírgula:")
     st.markdown('</div>', unsafe_allow_html=True)
 
-# Botão de sorteio
+# Botão centralizado
 if st.button("🎯 Sortear"):
     nomes = [x.strip() for x in entrada.split(",") if x.strip()]
     if nomes:
         sorteado = random.choice(nomes)
         st.markdown(f"<div class='resultado'>✅ Sorteado: <strong>{sorteado}</strong></div>", unsafe_allow_html=True)
     else:
-        st.warning("Por favor, insira pelo menos um nome ou número válido.")
+        st.warning("Por favor, insira ao menos um nome ou número válido.")
+
