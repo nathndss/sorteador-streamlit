@@ -17,7 +17,7 @@ st.markdown("""
     #entrada-box textarea {
         font-size: 25px;
         color: white;
-        background-color: light gray;  /* <-- cor de fundo mais clara */
+        background-color: #fff8e7;  /* ou outro que preferir */
         border: 2px solid #6a0dad;
         border-radius: 10px;
     }
