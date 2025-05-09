@@ -22,7 +22,7 @@ h1 {
 #entrada-box textarea {
     font-size: 22px;  /* Tamanho maior do texto */
     color: #4b0082;
-    background-color: #fafafa;  /* Cor mais clara */
+    background-color: white;  /* Cor mais clara */
     border: 2px solid #6a0dad;
     border-radius: 8px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
@@ -42,7 +42,7 @@ h1 {
 .stButton > button {
     display: block;
     margin: 20px auto;
-    background-color: white;
+    background-color: violet;
     color: white;
     font-size: 18px;
     padding: 10px 30px;
@@ -70,7 +70,7 @@ h1 {
 
 
 # Título do app
-st.markdown("<h1>🎲 Sorteador🎲</h1>", unsafe_allow_html=True)
+st.markdown("<h1>🎲 Sorteador 🎲</h1>", unsafe_allow_html=True)
 
 # Entrada de nomes
 with st.container():
