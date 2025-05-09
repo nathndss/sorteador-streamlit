@@ -26,6 +26,7 @@ st.markdown("""
         font-size: 80px;
         border-radius: 16px;
         padding: 16px 40px;
+        position: center;
     }
     </style>
 """, unsafe_allow_html=True)
