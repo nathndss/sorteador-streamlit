@@ -42,7 +42,7 @@ h1 {
 .stButton > button {
     display: block;
     margin: 20px auto;
-    background-color: violet;
+    background-color: lilac;
     color: white;
     font-size: 18px;
     padding: 10px 30px;
