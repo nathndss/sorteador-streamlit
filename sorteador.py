@@ -39,7 +39,7 @@ body, .main {
 /* Botão sorteio */
 .stButton > button {
     display: block;
-    margin: 20px auto;
+    margin: 10px auto 0 auto;  /* Reduzido o espaço acima */
     background-color: #6a0dad;
     color: white;
     font-size: 18px;
