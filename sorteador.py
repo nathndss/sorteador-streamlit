@@ -66,8 +66,7 @@ h1 {
 """, unsafe_allow_html=True)
 
 # Título principal
-st.markdown("<h1>🎲 Sorteador 🎲</h1>", unsafe_allow_html=True)
-
+st.markdown("<h1 class='titulo-principal'>🎲 Sorteador 🎲</h1>", unsafe_allow_html=True)
 # Caixa de entrada
 with st.container():
     st.markdown('<div id="entrada-box">', unsafe_allow_html=True)
