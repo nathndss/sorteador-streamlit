@@ -8,8 +8,6 @@ st.markdown("<h1 style='text-align: center; color: white;'>🎉 Sorteador Simple
 entrada = st.text_area("✍️ Digite os nomes ou números separados por vírgula:")
 
 col1, col2 = st.columns(2)
-with col1:
-    
 with col2:
     st.write("Bem-vindo ao sorteador!")
     
