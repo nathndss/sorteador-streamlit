@@ -8,7 +8,7 @@ st.set_page_config(page_title="Sorteador Online", page_icon="🎲")
 st.markdown("""
     <style>
     .main {
-        background-color: #f5f0ff;
+        background-color: white;
     }
     h1 {
         color: #6a0dad;
