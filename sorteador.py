@@ -23,8 +23,8 @@ st.markdown("""
         background-color: #6a0dad;
         color: white;
         font-size: 80px;
-        border-radius: 8px;
-        padding: 8px 20px;
+        border-radius: 16px;
+        padding: 16px 40px;
     }
     </style>
 """, unsafe_allow_html=True)
