@@ -42,17 +42,30 @@ st.markdown('<div id="entrada-box">', unsafe_allow_html=True)
 entrada = st.text_area(label="", height=150)
 st.markdown('</div>', unsafe_allow_html=True)
 
-# Botão centralizado
-col1, col2, col3 = st.columns([1, 1, 1])
-with col2:
-    sortear = st.button("🎯 Sortear")
+# Centralizando o botão com HTML + CSS
+st.markdown("""
+<div style="text-align: center;">
+    <form action="#">
+        <input type="submit" value="🎯 Sortear" style="
+            background-color: #6a0dad;
+            color: white;
+            font-size: 18px;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        " name="sorteio">
+    </form>
+</div>
+""", unsafe_allow_html=True)
 
-# Verifique o botão fora da coluna
-if 'sortear' in locals() and sortear:
+# Detecta clique manualmente
+botao_clicado = st.query_params.get("sorteio") is not None
+
+if botao_clicado:
     if entrada.strip():
         itens = [item.strip() for item in entrada.split(",") if item.strip()]
         sorteado = random.choice(itens)
         st.success(f"🥳 O sorteado foi: **{sorteado}**")
     else:
         st.warning("⚠️ Por favor, insira ao menos um item para sortear.")
-
