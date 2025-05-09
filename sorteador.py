@@ -31,7 +31,7 @@ h1 {
 
 #entrada-box textarea:hover,
 #entrada-box textarea:focus {
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
     border-color: #9b30ff;
 }
 
@@ -58,7 +58,7 @@ h1 {
 /* Resultado */
 .resultado {
     text-align: center;
-    font-size: 24px;
+    font-size: 100px;
     color: #2e0854;
     margin-top: 20px;
 }
