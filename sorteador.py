@@ -1,72 +1,84 @@
 import streamlit as st
 import random
 
-# Configuração da página
-st.set_page_config(page_title="Sorteador Online", page_icon="🎲")
-
-# Estilo CSS personalizado
+# CSS customizado
 st.markdown("""
-    <style>
-    .main {
-        background-color: white;
-    }
-    h1 {
-        color: #6a0dad;
-        text-align: center;
-    }
-    #entrada-box textarea {
-        font-size: 25px;
-        color: white;
-        background-color: #fff8e7;  /* ou outro que preferir */
-        border: 2px solid #6a0dad;
-        border-radius: 10px;
-    }
-    .stButton button {
-        background-color: #6a0dad;
-        color: white;
-        font-size: 16px;
-        border-radius: 8px;
-        padding: 8px 20px;
-    }
-    </style>
+<style>
+/* Fundo geral */
+body, .main {
+    background-color: #f5f0ff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Título */
+h1 {
+    color: #6a0dad;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Área de texto personalizada */
+#entrada-box textarea {
+    font-size: 18px;
+    color: #4b0082;
+    background-color: #f9f9f9;
+    border: 2px solid #6a0dad;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#entrada-box textarea:hover,
+#entrada-box textarea:focus {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+    border-color: #9b30ff;
+}
+
+/* Botão sorteio */
+.stButton > button {
+    display: block;
+    margin: 20px auto;
+    background-color: #6a0dad;
+    color: white;
+    font-size: 18px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.stButton > button:hover {
+    background-color: #7b1fa2;
+    transform: scale(1.03);
+}
+
+/* Resultado */
+.resultado {
+    text-align: center;
+    font-size: 24px;
+    color: #2e0854;
+    margin-top: 20px;
+}
+</style>
 """, unsafe_allow_html=True)
 
+# Título principal
+st.markdown("<h1>🎲 Sorteador de Nomes ou Números</h1>", unsafe_allow_html=True)
 
-# Título
-st.markdown("<h1>🎉 Sorteador Online 🎉</h1>", unsafe_allow_html=True)
+# Caixa de entrada
+with st.container():
+    st.markdown('<div id="entrada-box">', unsafe_allow_html=True)
+    entrada = st.text_area("✍️ Digite os nomes ou números separados por vírgula:")
+    st.markdown('</div>', unsafe_allow_html=True)
 
-# Título da entrada com tamanho e cor personalizada
-st.markdown("<h3 style='color: white;'>✍️ Digite os nomes ou números separados por vírgula:</h3>", unsafe_allow_html=True)
-
-# Entrada de texto estilizada
-st.markdown('<div id="entrada-box">', unsafe_allow_html=True)
-entrada = st.text_area(label="", height=150)
-st.markdown('</div>', unsafe_allow_html=True)
-
-# Centralizando o botão com HTML + CSS
-st.markdown("""
-<div style="text-align: center;">
-    <form action="#">
-        <input type="submit" value="🎯 Sortear" style="
-            background-color: #6a0dad;
-            color: white;
-            font-size: 18px;
-            padding: 10px 30px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        " name="sorteio">
-    </form>
-</div>
-""", unsafe_allow_html=True)
-
-# Detecta clique manualmente
-botao_clicado = st.query_params.get("sorteio") is not None
-
-if botao_clicado:
-    if entrada.strip():
-        itens = [item.strip() for item in entrada.split(",") if item.strip()]
-        sorteado = random.choice(itens)
-        st.success(f"🥳 O sorteado foi: **{sorteado}**")
+# Botão de sorteio
+if st.button("🎯 Sortear"):
+    nomes = [x.strip() for x in entrada.split(",") if x.strip()]
+    if nomes:
+        sorteado = random.choice(nomes)
+        st.markdown(f"<div class='resultado'>✅ Sorteado: <strong>{sorteado}</strong></div>", unsafe_allow_html=True)
     else:
-        st.warning("⚠️ Por favor, insira ao menos um item para sortear.")
+        st.warning("Por favor, insira pelo menos um nome ou número válido.")
