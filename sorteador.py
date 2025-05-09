@@ -10,11 +10,12 @@ body, .main {
     font-family: 'Segoe UI', sans-serif;
 }
 
-.titulo-principal {
+.titulo {
+    font-size: 70px !important;
     color: #6a0dad;
     text-align: center;
-    font-size: 70px;  /* Agora realmente grande */
     margin-bottom: 20px;
+}
 }
 
 /* Área de texto personalizada */
@@ -65,7 +66,7 @@ body, .main {
 """, unsafe_allow_html=True)
 
 # Título principal
-st.markdown("<h1 class='titulo-principal'>🎲 Sorteador 🎲</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='titulo'>🎲 Sorteador 🎲</h1>", unsafe_allow_html=True)
 # Caixa de entrada
 with st.container():
     st.markdown('<div id="entrada-box">', unsafe_allow_html=True)
