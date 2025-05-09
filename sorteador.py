@@ -41,7 +41,7 @@ body, .main {
     display: block;
     margin: 5px auto 0 auto;.  /* Reduzido o espaço acima */
     background-color: violet;
-    color: white;
+    color: violet;
     font-size: 18px;
     padding: 10px 30px;
     border: none;
