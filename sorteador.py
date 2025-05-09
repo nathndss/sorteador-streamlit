@@ -1,14 +1,16 @@
 import streamlit as st
 import random
 
-st.title("Sorteador Simples")
+st.set_page_config(page_title="Sorteador", page_icon="🎲")
 
-entrada = st.text_area("Digite os nomes ou números separados por vírgula:", "")
+st.markdown("<h1 style='text-align: center; color: purple;'>🎉 Sorteador Simples 🎉</h1>", unsafe_allow_html=True)
 
-if st.button("Sortear"):
+entrada = st.text_area("✍️ Digite os nomes ou números separados por vírgula:")
+
+if st.button("🎯 Sortear"):
     if entrada.strip():
         itens = [item.strip() for item in entrada.split(",") if item.strip()]
         sorteado = random.choice(itens)
-        st.success(f"O sorteado foi: **{sorteado}**")
+        st.success(f"🥳 O sorteado foi: **{sorteado}**")
     else:
-        st.warning("Por favor, insira pelo menos um item para sortear.")
+        st.warning("⚠️ Por favor, insira ao menos um item para sortear.")
