@@ -71,10 +71,7 @@ st.markdown("<h1 class='titulo'>🎲 Sorteador 🎲</h1>", unsafe_allow_html=Tru
 # Caixa de entrada
 with st.container():
     st.markdown('<div id="entrada-box">', unsafe_allow_html=True)
-    entrada = st.text_area("✍️ Digite os nomes ou números separados por vírgula:", height=200)
-    st.markdown('</div>', unsafe_allow_html=True)
-
-entrada = st.text_area("✍️ Digite um nome ou número por linha:", height=300)
+    entrada = st.text_area("✍️ Digite um nome ou número por linha:", height=300)
 
 if st.button("🎯 Sortear"):
     nomes = [n.strip() for n in entrada.splitlines() if n.strip()]
