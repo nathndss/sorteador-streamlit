@@ -60,7 +60,7 @@ body, .main {
 .resultado {
     text-align: center;
     font-size: 70px;
-    color: #2e0854;
+    color: white;
     margin-top: 15px;
 }
 </style>
