@@ -77,7 +77,7 @@ if st.button("🎯 Sortear"):
     nomes = [n.strip() for n in entrada.splitlines() if n.strip()]
     if nomes:
         sorteado = random.choice(nomes)
-        st.markdown(f"<h2 style='color: white; text-align: center; font-size: 36px;'>✅ Sorteado ➡️ : <strong>{sorteado}</strong></h2>", unsafe_allow_html=True)
+        st.markdown(f"<h2 style='color: white; text-align: center; font-size: 36px;'>Sorteado ➡️  <strong>{sorteado}</strong></h2>", unsafe_allow_html=True)
     else:
         st.warning("⚠️ Digite pelo menos um nome ou número para sortear.")
 
