@@ -74,13 +74,13 @@ with st.container():
     entrada = st.text_area("✍️ Digite os nomes ou números separados por vírgula:", height=200)
     st.markdown('</div>', unsafe_allow_html=True)
 
-# Botão de sorteio
+entrada = st.text_area("✍️ Digite um nome ou número por linha:", height=300)
+
 if st.button("🎯 Sortear"):
-    nomes = [x.strip() for x in entrada.split(",") if x.strip()]
+    nomes = [n.strip() for n in entrada.splitlines() if n.strip()]
     if nomes:
         sorteado = random.choice(nomes)
-        st.markdown(f"<div class='resultado'>✅Resultado: <strong>{sorteado}</strong></div>", unsafe_allow_html=True)
+        st.success(f"✅ Sorteado: **{sorteado}**")
     else:
-        st.warning("Por favor, insira pelo menos um nome ou número válido.")
-
+        st.warning("⚠️ Digite pelo menos um nome ou número para sortear.")
 
